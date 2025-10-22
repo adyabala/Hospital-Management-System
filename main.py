@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import login_user,logout_user,login_manager,LoginManager
 from flask_login import login_required,current_user
 # from flask_mail import Mail
-import json
+
 
 
 
@@ -19,16 +19,7 @@ app.secret_key='hmsprojects'
 login_manager=LoginManager(app)
 login_manager.login_view='login'
 
-# SMTP MAIL SERVER SETTINGS
 
-# app.config.update(
-#     MAIL_SERVER='smtp.gmail.com',
-#     MAIL_PORT='465',
-#     MAIL_USE_SSL=True,
-#     MAIL_USERNAME="add your gmail-id",
-#     MAIL_PASSWORD="add your gmail-password"
-# )
-# mail = Mail(app)
 
 
 @login_manager.user_loader
@@ -140,9 +131,7 @@ def patient():
         db.session.add(query)
         db.session.commit()
         
-        # mail starts from here
 
-        # mail.send_message(subject, sender=params['gmail-user'], recipients=[email],body=f"YOUR bOOKING IS CONFIRMED THANKS FOR CHOOSING US \nYour Entered Details are :\nName: {name}\nSlot: {slot}")
 
 
 
