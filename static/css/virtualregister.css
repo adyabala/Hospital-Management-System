@@ -16,7 +16,7 @@
 
 .bg-dark {
     background-color: #d48763;
-    background-image: linear-gradient(315deg, #d47663 0%, #332323 74%);
+    background-image: linear-gradient(315deg, #d47663 0%, #ac0a0a 74%);
 }
 
 label {
@@ -27,7 +27,7 @@ label {
 
 .jumbotron {
     background-color: #d48763;
-    background-image: linear-gradient(315deg, #d47663 0%, #332323 74%);
+    background-image: linear-gradient(315deg, #d47663 0%, #ac0a0a 74%);
 }
 
 #gender {
@@ -68,7 +68,7 @@ option {
 
 #btn {
     background-color: #d48763;
-    background-image: linear-gradient(315deg, #d47663 0%, #332323 74%);
+    background-image: linear-gradient(315deg, #d47663 0%, #ac0a0a 74%);
     border-radius: 15px;
     border: none;
     position: relative;
