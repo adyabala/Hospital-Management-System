@@ -11,20 +11,19 @@ Patients Booking
 
 <div class="col-md-5">
 <div class="card" style="width: 18rem;">
-  <img src="static/images/doc.jpg" class="card-img-top" alt="...">
+  <img src="static/image1.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">HOSPITAL DOCTORS</h6>
     <p class="card-text">Doctors Names</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">Dr. Arjun Mehta - Cardiologists</li>
+    <li class="list-group-item">Dr. Priya Nair - Dermatologists</li>
+    <li class="list-group-item">Dr. Vikram Rao - Anesthesiologists</li>
+    <li class="list-group-item">Dr. Sneha Kapoor - Endocrinologists</li>
+    <li class="list-group-item">Dr. Rohan Sharma - Virologists</li>
   </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Contact Us</a>
-    <a href="#" class="card-link">About US</a>
-  </div>
+  
 </div>
 
 </div>
@@ -112,17 +111,17 @@ Patients Booking
   
   </div>
 
-<div class="form-group">
-
-            
+<div class="form-group"> 
                                       
-<select class="form-control" id="dept" name="dept"  required>
-        <option selected>Select Doctor Department</option>
-        {% for d in doct  %}
-        <option value="{{d.dept}}">{{d.dept}}</option>
-        {% endfor %}
-      </select>
- </div>
+<select class="form-control" id="dept" name="dept" required>
+  <option selected disabled>Select Doctor Department</option>
+  <option value="Cardiologist">Cardiologist</option>
+  <option value="Dermatologist">Dermatologist</option>
+  <option value="Anesthesiologist">Anesthesiologist</option>
+  <option value="Endocrinologist">Endocrinologist</option>
+  <option value="Virologist">Virologist</option>
+</select>
+</div>
 
   <div class="form-group">
 

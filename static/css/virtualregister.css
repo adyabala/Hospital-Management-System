@@ -4,30 +4,31 @@
 }
 
 .pricing .row {
-    padding-top: 0px;
+    padding-top: 10px;
 }
 
 .card {
-    margin-top: 57px;
-    border-radius: 8px 40px 40px 8px;
+    margin-top: 65px;
+    border-radius: 10px 50px 50px 10px;
     transition: all 0.5s ease-in-out;
-    box-shadow: 1px 0px 8px 2px rgb(255, 92, 47);
+    /* box-shadow: 1px 0px 8px 2px rgb(255, 92, 47); */
+    box-shadow: 5px 3px 10px 4px rgb(255, 92, 47);
 }
 
 .bg-dark {
     background-color: #d48763;
-    background-image: linear-gradient(315deg, #d47663 0%, #ac0a0a 74%);
+    background-image: linear-gradient(315deg, #d47663 0%, #490101 74%);
 }
 
 label {
     color: white;
     margin-top: 15px;
-    font-family: 'Itim', cursive;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .jumbotron {
     background-color: #d48763;
-    background-image: linear-gradient(315deg, #d47663 0%, #ac0a0a 74%);
+    background-image: linear-gradient(315deg, #d47663 0%, #490101 74%);
 }
 
 #gender {
@@ -45,16 +46,15 @@ label {
 .form-group input {
     width: 300px;
     border: none;
-    /* border-bottom: 1px solid purple; */
     border-bottom: 2px solid rgb(210, 65, 65);
     outline: none;
     font-size: 22px;
     margin-bottom: 5px;
-    font-family: 'Itim', cursive;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 option {
-    width: 400px;
+    width: 300px;
     border: none;
     border-bottom: 2px solid rgb(210, 65, 65);
     outline: none;
@@ -68,7 +68,7 @@ option {
 
 #btn {
     background-color: #d48763;
-    background-image: linear-gradient(315deg, #d47663 0%, #ac0a0a 74%);
+    background-image: linear-gradient(315deg, #d47663 0%, #490101 74%);
     border-radius: 15px;
     border: none;
     position: relative;
