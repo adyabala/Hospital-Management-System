@@ -11,7 +11,6 @@
     margin-top: 65px;
     border-radius: 10px 50px 50px 10px;
     transition: all 0.5s ease-in-out;
-    /* box-shadow: 1px 0px 8px 2px rgb(255, 92, 47); */
     box-shadow: 5px 3px 10px 4px rgb(255, 92, 47);
 }
 
@@ -56,7 +55,7 @@ label {
 option {
     width: 300px;
     border: none;
-    border-bottom: 2px solid rgb(210, 65, 65);
+    border-bottom: 10px solid rgb(210, 65, 65);
     outline: none;
     font-size: 22px;
     margin-bottom: 5px;
@@ -69,7 +68,7 @@ option {
 #btn {
     background-color: #d48763;
     background-image: linear-gradient(315deg, #d47663 0%, #821515 74%);
-    border-radius: 15px;
+    border-radius: 20px;
     border: none;
     position: relative;
     width: 300px;
