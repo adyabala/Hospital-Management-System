@@ -69,25 +69,31 @@ INSERT INTO `patients` (`pid`, `email`, `name`, `gender`, `slot`, `disease`, `ti
 
 -- --------------------------------------------------------
 -- Triggers for table `patients`
+-- Create triggers for audit logging on patients table
 -- --------------------------------------------------------
 
+-- Change delimiter to $$ to allow trigger creation with semicolons inside
 DELIMITER $$
 CREATE TRIGGER `PatientDelete` 
 BEFORE DELETE ON `patients` 
-FOR EACH ROW 
+FOR EACH ROW -- Executes for each row being deleted
 INSERT INTO trigr VALUES (NULL, OLD.pid, OLD.email, OLD.name, 'PATIENT DELETED', NOW());
+-- OLD refers to the row being deleted, NOW() gets current timestamp
 $$
-DELIMITER ;
+DELIMITER ;-- Reset delimiter back to semicolon
 
 DELIMITER $$
+-- Create trigger that fires AFTER UPDATE on patients table
 CREATE TRIGGER `PatientUpdate` 
 AFTER UPDATE ON `patients` 
 FOR EACH ROW 
 INSERT INTO trigr VALUES (NULL, NEW.pid, NEW.email, NEW.name, 'PATIENT UPDATED', NOW());
+-- NEW refers to the updated row values
 $$
 DELIMITER ;
 
 DELIMITER $$
+-- Create trigger that fires AFTER INSERT on patients table
 CREATE TRIGGER `patientinsertion` 
 AFTER INSERT ON `patients` 
 FOR EACH ROW 
@@ -152,7 +158,7 @@ INSERT INTO `user` (`id`, `username`, `usertype`, `email`, `password`) VALUES
 (15, 'khushi', 'Patient', 'khushi@gmail.com', 'pbkdf2:sha256:150000$BeSHeRKV$a8b27379ce9b2499d4caef21d9d387260b3e4ba9f7311168b6e180a00db91f22');
 
 -- --------------------------------------------------------
--- Indexes
+-- Add primary keys and indexes
 -- --------------------------------------------------------
 
 ALTER TABLE `doctors`

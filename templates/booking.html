@@ -1,3 +1,5 @@
+<!--This line indicates that this template extends/inherits from base.html-->
+
 {% extends 'base.html' %}
 
 {% block title %}
@@ -40,9 +42,12 @@ Booking
     </tr>
   </thead>
   <tbody>
+  <!-- Loop through each patient record in the query results -->
   {% for post in query %}
+  <!-- 'query' is passed from Flask route - contains patient data -->
     <tr>
       <th scope="row">{{post.pid}}</th>
+      <!-- scope="row": identifies this as row header for accessibility -->
       <td>{{post.email}}</td>
       <td>{{post.name}}</td>
       <td>{{post.gender}}</td>
@@ -52,7 +57,9 @@ Booking
       <td>{{post.time}}</td>
       <td>{{post.dept}}</td>
       <td>{{post.number}}</td>
-    <td><a href="/edit/{{post.pid}}"><button class="btn btn-success">Edit </button> </a> </td>
+    <td><a href="/edit/{{post.pid}}">
+    <!-- Link to edit route with patient ID as parameter -->
+    <button class="btn btn-success">Edit </button> </a> </td>
     <td><a href="/delete/{{post.pid}}"><button onclick="return confirm('Are you sure you want to Delete data?');" class="btn btn-danger">Delete </button> </a> </td>
     </tr>
 {% endfor %}
