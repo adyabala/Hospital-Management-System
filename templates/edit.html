@@ -23,15 +23,27 @@ Edit Patient BOOKING
  
 
   <div class="form-group">
-
+    <!-- Email Input Field -->
     <input type="email" class="form-control" id="email" value={{current_user.email}} name="email" required>
+    <!-- 
+                - type="email": HTML5 email input with validation
+                - class="form-control": Bootstrap styling for form controls
+                - id="email": Unique identifier for the field
+                - value="{{current_user.email}}": Pre-fills with current user's email
+                - name="email": Name used when submitting form data to server
+                - required: HTML5 attribute - field must be filled before submission
+                -->
   
   </div>
 
   <div class="form-group">
   
     <input type="text" class="form-control" id="name" name="name" value={{posts.name}} placeholder="Full Name" required>
-  
+    <!-- 
+                - type="text": Standard text input
+                - value="{{posts.name}}": Pre-fills with existing patient name from database
+                - placeholder="Full Name": Hint text that disappears when user types
+                -->
   </div>
 
  <div class="form-group">
@@ -48,11 +60,11 @@ Edit Patient BOOKING
  </div>
 
  <div class="form-group">
-
-            
+  
                                       
 <select class="form-control" id="slot" name="slot"  required>
         <option selected>{{posts.slot}} </option>
+        <!-- Pre-selects current slot value from database -->
         <option value="morning">Morning</option>
         <option value="evening">Evening</option>
         <option value="night">Night</option>

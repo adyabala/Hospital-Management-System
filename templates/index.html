@@ -6,6 +6,8 @@ HOME
 
 {% block body %}
 
+<!-- Flash Messages Handling Section -->
+    <!-- Retrieves all flashed messages from Flask session with their categories -->
 {% with messages=get_flashed_messages(with_categories=true) %}
 {% if messages %}
 {% for category, message in messages %}
